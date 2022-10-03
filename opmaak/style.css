@@ -1,0 +1,66 @@
+body {
+    background-image: url("../afbeeldingen/achtergrond.jpg");
+    background-size: cover;
+}
+
+header, nav, footer, article {
+    display: block;
+    font-family: Trebuchet, Trebuchet MS, Verdana;
+    text-align: center;
+}
+
+header, footer {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+header, footer {
+    background-color: white;
+    padding: 5px;
+}
+
+header {
+    margin-top: -8px
+}
+
+nav {
+    float: left;
+    width: 15%;
+    position: absolute;
+}
+
+.menu {
+    display: block;
+    width: 70px;
+    background-color: #64F5E6;
+    /* lichtblauw */
+    text-decoration: none;
+    padding: 10px;
+    margin: 10px;
+    color: black;
+}
+
+.menu:hover {
+    background-color: black;
+    color: #64F5E6;
+    /* lichtblauw */
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+article {
+    float: right;
+    width: 85%;
+    margin: 10px;
+    padding: 10px;
+    background-color: #64F5E6;
+    /* lichtblauw */
+}
+
+footer {
+    clear: both
+}

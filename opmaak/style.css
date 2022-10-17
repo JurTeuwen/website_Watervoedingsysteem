@@ -27,7 +27,8 @@ nav {
 .menu {
     display: block;
     width: 70px;
-    background-color: #f564f0;
+    background-color: #64F5E6;
+    /* lichtblauw */
     text-decoration: none;
     padding: 10px;
     margin: 10px;
@@ -36,7 +37,7 @@ nav {
 
 .menu:hover {
     background-color: black;
-    color: #64F5E6;
+    color: #ffffff;
     /* lichtblauw */
 }
 
@@ -53,6 +54,20 @@ article {
     padding: 10px;
     background-color: #64F5E6;
     /* lichtblauw */
+}
+#navbar {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  /* Navbar links */
+#navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
 }
 
 footer {

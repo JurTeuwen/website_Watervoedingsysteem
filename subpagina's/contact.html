@@ -20,14 +20,27 @@
     integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
     crossorigin="anonymous"></script>
     <menu></menu>
-    <div class="mb-3"style="margin-top: 4.5rem;">
-        <label for="exampleFormControlInput1" class="form-label">Email</label>
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+    <form class="was-validated">
+      <div class="col-md-6"style="margin-top: 5rem">
+        <label for="inputEmail4" class="form-label">Email</label>
+        <input type="email" class="form-control" id="inputEmail4"placeholder="name@example.com">
+        <div class="invalid-feedback">
+          Dit veld moet correct ingevuld worden
+        </div>
       </div>
-      <div class="mb-3">
-        <label for="exampleFormControlTextarea1" class="form-label">Bericht</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
       </div>
+      <form class="was-validated">
+        <div class="mb-3">
+          <label for="validationTextarea" class="form-label">probleem</label>
+          <textarea class="form-control" id="validationTextarea" placeholder="Type hier uw probleem" required></textarea>
+          <div class="invalid-feedback">
+            Dit veld mag niet leeggelaten worden
+          </div>
+        </div>
+        <div class="mb-3">
+          <button class="btn btn-primary" type="submit" >verstuur bericht</button>
+        </div>
+
 </body>
 
 </html>

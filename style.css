@@ -1,14 +1,12 @@
-.voet_1{
-    width: 70%;
-    height: 50%;
-    margin-left: center;
-    margin-top: center;
+.fotorol {
+    height: 500px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
-.voet_2{
-    width: 645px;
-    height: 620px;
-    margin-left: 27.5rem;
-}
-/* .voet_3{
 
-} */
+.voet1 {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}

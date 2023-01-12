@@ -40,8 +40,13 @@ new Chart("myChart", {
   },
   options: {
     legend: {display: false},
+    title: {
+      display: true,
+      text: "Waterwaarden in liters (L)",
+      fontSize: 16,
     scales: {
       yAxes: [{ticks: {min: 6, max:16}}],
+    }
     }
   }
 });

@@ -19,15 +19,14 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 <menu></menu>
-
-<body>
-
   <canvas id="myChart"
-    style="margin-top:7.5rem;margin-left:auto;margin-right:auto;width:100%;max-width: 1000px;margin-bottom: 5rem;"></canvas>
+    style="margin-top:7%;margin-left:auto;margin-right:auto;width:100%;max-width: 68%;margin-bottom: 5rem;"></canvas>
   <script>
     var xValues = ["00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", '22', "23", "24"];
-    var yValues = [5,17, 8, 8, 9, 9, 9, 10, 11, 14, 14, 15,13,];
+    var yValues = [5,17, 8, 8, 9, 9, 9, 10, 11, 14, 14, 15,13,15,];
     const arr = yValues;
+    const Gewenste_waarden = 10
+    const lijst_gew = []
 
 // Bereken gemiddelde waarde van arr
     var som = 0;
@@ -35,13 +34,12 @@
         som += number;
     }
     var gem = som/arr.length;
-    console.log(gem);
-
-    // Maak een lege array arr_2
-    // Voeg per element in arr de gemiddelde waarde toe aan arr_2
     var arr_2 = []
     for (var _ of arr) {
         arr_2.push(gem)
+    }
+    for (var _ of arr) {
+        lijst_gew.push(Gewenste_waarden)
     }
     console.log(arr_2)
     new Chart("myChart", {
@@ -50,6 +48,7 @@
         labels: xValues,
         datasets: [{
           fill: false,
+          label: "Waterwaarden",
           lineTension: 0,
           backgroundColor: "rgba(0,0,255,1)",
           borderColor: "rgba(0,0,255,1)",
@@ -58,28 +57,45 @@
         {
           fill: false,
           lineTension: 0,
+          label:"Gemiddelde waterwaarden",
           backgroundColor: "rgba(0,255,0,1.0)",
           borderColor: "rgba(0,255,0,1)",
           data: arr_2
+        },
+        {
+          fill: false,
+          lineTension: 0,
+          label:"Gewenste waterwaarden",
+          backgroundColor: "rgba(255,0,0,1.0)",
+          borderColor: "rgba(255,0,0,1)",
+          data: lijst_gew
         }
         ]
       },
       options: {
-        legend: { display: false },
-        yAxes: [{
-          ticks:{
-          min: 6,
-          max:16
-          }
+        legend: { display: true },
+        scales:{
+          yAxes: [{
+            ticks:{
+              beginAtZero:true,
+              stopAt : "20"
+            },
+            display: true,
+            scaleLabel: {
+              display: true,
+              labelString: 'Waarden in Liter'
+            }
         }],
-       },
-        title: {
-          display: true,
-          text: "Waterwaarden in liters (L)",
-          fontSize: 16,
+          xAxes: [{
+            display: true,
+            scaleLabel: {
+              display: true,
+              labelString: 'Tijd in uur '
+            }
+          }]
+        }
       }
     });
-
   </script>
   <footer class="fixed-bottom">
     <voet></voet>

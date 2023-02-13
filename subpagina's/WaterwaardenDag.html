@@ -20,9 +20,6 @@
 </head>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
-  setTimeout(function()  {
-    window.location.reload(true);
-  }, 1000);
 </script>
 <menu></menu>
   <canvas id="myChart"
@@ -37,6 +34,7 @@
     const lijst_min = []
     var  maximum = Math.max(...arr)
     var minimum = Math.min(...arr)
+    var oldvar
 
 // Bereken gemiddelde waarde van arr
     var som = 0;
@@ -129,6 +127,12 @@
         }
       }
     });
+    if (oldvar =! arr.length){
+      window.location.reload(1)
+    }else{
+      window.location.reload(0)
+    }
+    oldvar = arr.length
   </script>
     <div class="alert-div"></div>
   <footer class="fixed-bottom">

@@ -13,7 +13,7 @@ loginButton.addEventListener("click", (e) => {
     if (username === "Watervoeding" && password === "WSysteem") {
         location.reload()
         console.log("admin show");
-        window.location.replace("https://plantenvoedingsysteem.netlify.app/");
+        window.location.replace("https://plantenvoedingsysteem.netlify.app/adminpage.html");
 
     } else {
         loginErrorMsg.style.opacity = 1;

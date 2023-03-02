@@ -3,82 +3,146 @@
 <html lang=nl>
 
 <head>
-  <meta charset=utf-8>
-  <meta name="robots" content="all">
-
-  <title>Watervoedingsysteem</title>
-  <link rel="icon" type="png" href="afbeeldingen/symbool.png">
-  <script src="/componenten/menu.js" type="text/javascript" defer></script>
-  <script src="/componenten/voet.js" type="text/javascript" defer></script>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-
+    <meta charset=utf-8>
+    <meta name="robots" content="all">
+  
+    <title>Watervoedingsysteem</title>
+    <link rel="icon" type="png" href="afbeeldingen/symbool.png">
+    <script src="/componenten/menu.js" type="text/javascript" defer></script>
+    <script src="/componenten/voet.js" type="text/javascript" defer></script>
+    <script src="/componenten/alert.js" type="text/javascript" defer></script>
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  
 </head>
 
 <body>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
-    crossorigin="anonymous"></script>
+  integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+  crossorigin="anonymous"></script>
   <menu></menu>
-  <table class="table" style="margin-top:4rem;">
-    <thead>
-      <tr>
-        <th scope="col">onderdeel</th>
-        <th scope="col">prijs</th>
-        <th scope="col" style="text-align: center;">aantal</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">-Grondvochtigheid sensor</th>
-        <td>0,99€</td>
-        <td style="text-align: center;">1</td>
-      </tr>
-      <tr>
-        <th scope="row">-Grondvruchtbaarheid sensor</th>
-        <td>27,09€</td>
-        <td style="text-align: center;">1</td>
-      </tr>
-      <tr>
-        <th scope="row">-Water pomp</th>
-        <td>11,60€</td>
-        <td style="text-align: center;">1</td>
-      </tr>
-      <tr>
-        <th scope="row">-Jerrycan 1L</th>
-        <td>1,90€</td>
-        <td style="text-align: center;">1</td>
-      </tr>
-      <tr>
-        <th scope="row">-Waterniveau Sensor</th>
-        <td>0,86€</td>
-        <td style="text-align: center;">1</td>
-      </tr>
-      <tr>
-        <th scope="row">-Raspberry pi</th>
-        <td>94,95€</td>
-        <td style="text-align: center;">1</td>
-      </tr>
-    </tbody>
-  </table>
-  <table class="table" style="margin-top:13rem;">
-    <thead>
-      <tr>
-        <th scope="col" style="text-align: center;">Totale kosten</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row" style="text-align: center;">De totale kosten bedraagt 137,40€. Dit is enkel voor 1 plantenbak
-        </th>
-      </tr>
-    </tbody>
-  </table>
+  <div class="demo">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-sm-6">
+          <div class="pricingTable blue">
+            <div class="pricingTable-header">
+              <i class="fa fa-adjust"></i>
+              <div class="price-value"> Grondvochtigheid sensor <span class="month">Capacitive soil sensor moisture sensor V1.2</span> </div>
+            </div>
+            <div class="pricing-content">
+              <ul>
+                <li><b>Aantal</b> 1</li>
+                <li><b>Prijs </b>€5,29</li>
+                <li><img src="/afbeeldingen/grondvochtigheid.jpg" alt="Foto kan niet geladen worden. Refresh de pagina"style:></li>
+              </ul> 
+            </div>
+            <div class="pricingTable-signup">
+              <a href="https://www.bol.com/be/nl/p/azdelivery-bodemvochtigheidssensor-hygrometer-module-v1-2-capacitief-compatibel-met-arduino-inclusief-e-book/9300000119723872/?Referrer=ADVNLGOO002013-G-135735706222-S-1679639871055-9300000119723872&gclid=EAIaIQobChMIrIq-t-y1_QIV14jVCh2Wjwz3EAQYBiABEgKtKPD_BwE">kopen</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+          <div class="pricingTable blue">
+            <div class="pricingTable-header">
+              <i class="fa fa-briefcase"></i>
+              <div class="price-value"> Grondvruchtbaarheid sensor <span class="month">Soil NPK sensor</span> </div>
+            </div>
+            <div class="pricing-content">
+              <ul>
+                <li><b>Aantal</b> 1</li>
+                <li><b>Prijs</b> €98,37</li>
+                <li><img src="/afbeeldingen/grondvruchtbaarheid.jpg" alt="Foto kan niet geladen worden. Refresh de pagina"></li>
+              </ul>
+            </div>
+            <div class="pricingTable-signup">
+              <a href="https://www.amazon.com.be/-/en/Moisture-Sensor-Precision-Nutrient-Fertiliser/dp/B0828563JM/ref=asc_df_B0828563JM/?tag=begogshpadde-21&linkCode=df0&hvadid=633370521727&hvpos=&hvnetw=g&hvrand=12528538064983957821&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1001176&hvtargid=pla-1945170489788&psc=1&gclid=EAIaIQobChMI6pyuiu21_QIV0KfVCh0gYgcyEAQYASABEgK5BvD_BwE">kopen  </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="pricingTable blue">
+            <div class="pricingTable-header">
+              <i class="fa fa-briefcase"></i>
+              <div class="price-value"> Waterniveau sensor <span class="month">Ultrasonic Distance Sensor HC-SR04 5V Version</span> </div>
+            </div>
+            <div class="pricing-content">
+              <ul>
+                <li><b>Aantal</b> 1</li>
+                <li><b>Prijs</b> €2,90</li>
+                <li><img src="/afbeeldingen/afstandsensor.jpg" alt="Foto kan niet geladen worden. Refresh de pagina"></li>
+              </ul>
+            </div>
+            <div class="pricingTable-signup">
+              <a href="https://benl.rs-online.com/web/p/bbc-micro-bit-add-ons/2153181?cm_mmc=BE-PLA-DS3A-_-google-_-PLA_BE_NL_Raspberry_Pi_%26_Arduino_%26_ROCK_%26_Development_Tools_Whoop-_-(BE:Whoop!)+BBC+micro:bit+Add-ons-_-2153181&matchtype=&pla-328481528778&gclid=CjwKCAiAjPyfBhBMEiwAB2CCIk6i0V6w9VMlcYRml-KhDxOuEyJ1USiwvSqrYai0d9JLr8nvAc6SNBoCRSkQAvD_BwE&gclsrc=aw.ds">kopen </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="pricingTable">
+            <div class="pricingTable-header">
+              <i class="fa fa-briefcase"></i>
+              <div class="price-value"> waterpomp <span class="month">DFRobot FIT0563</span> </div>
+            </div>
+            <div class="pricing-content">
+              <ul>
+                <li><b>Aantal</b> 1</li>
+                <li><b>Prijs</b> €8,63</li>
+                <img src="/afbeeldingen/waterpomp.jpg" alt="Foto kan niet geladen worden. Refresh de pagina">
+              </ul>
+            </div>
+            <div class="pricingTable-signup">
+              <a href="https://www.digikey.be/nl/products/detail/dfrobot/FIT0563/8827828?utm_adgroup=Prototyping%2C%20Fabrication&utm_source=google&utm_medium=cpc&utm_campaign=Shopping_Product_Maker%2FDIY%2C%20Educational&utm_term=&productid=8827828&gclid=Cj0KCQjwhY-aBhCUARIsALNIC06lGeAWXpXdobnh9ULdF74u7EMuUleGxMLegeXsWG0TAHL2VPxzUvYaAiNuEALw_wcB">kopen</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6"style="margin-left: 25%;">
+          <div class="pricingTable green">
+            <div class="pricingTable-header">
+              <i class="fa fa-diamond"></i>
+              <div class="price-value"> Jerrycan  <span class="month"> 1 liter</span> </div>
+            </div>
+            <div class="pricing-content">
+              <ul>
+                <li><b>Aantal</b> 1</li>
+                <li><b>prijs</b> 	€1,90</li>
+                <li><img src="/afbeeldingen/jerrycan.jpg" alt="Foto kan niet geladen worden. Refresh de pagina"></li>
+              </ul>
+            </div>
+            <div class="pricingTable-signup">
+              <a href="https://www.jerrycanshop.nl/nl/1-liter-stapelbare-un-jerrycan-naturel.html">kopen</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="pricingTable red">
+            <div class="pricingTable-header">
+              <i class="fa fa-cube"></i>
+              <div class="price-value"> Raspberry Pi <span class="month">4GB</span> </div>
+            </div>
+            <div class="pricing-content">
+              <ul>
+                <li><b>Aantal</b> 1</li>
+                <li><b>prijs</b> €104,95 </li>
+                <li><b>werkgeheugen</b>4GB</li>
+                <li><img src="/afbeeldingen/raspberry.jpg" alt="Foto kan niet geladen worden. Refresh de pagina"></li>
+              </ul>
+            </div>
+            <div class="pricingTable-signup">
+              <a href="https://www.raspberrystore.nl/PrestaShop/nl/onderwijspakketten/371-hva-onderwijspakket-brons.html">kopen</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
-
-<footer class="fixed-bottom">
+<footer>
+<div class = "fixed-bottom">
   <voet></voet>
+</div>
 </footer>
-
 </html>

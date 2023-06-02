@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2022-09-19" view-index="0" gantt-divider-location="434" resource-divider-location="300" version="2.8.11" locale="nl">
+    <description/>
+    <view zooming-state="default:7" id="gantt-chart">
+        <field id="tpd3" name="Naam" width="302" order="0"/>
+        <field id="tpd4" name="Begin datum" width="63" order="1"/>
+        <field id="tpd5" name="Eind datum" width="65" order="2"/>
+        <option id="color.recent"><![CDATA[#ffff00 #333300 #f4f4f4 #00ff00 #cccccc #00cccc #000000 #cc00cc #990099 #cc0033]]></option>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Naam" width="210" order="0"/>
+        <field id="1" name="Standaard rol" width="86" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="0" name="start VOP" color="#3333ff" meeting="false" start="2022-09-26" duration="1" complete="0" thirdDate="2022-09-26" thirdDate-constraint="0" expand="true"/>
+        <task id="2" name="sensor zoeken" color="#33cc00" meeting="false" start="2022-09-26" duration="1" complete="0" thirdDate="2022-09-26" thirdDate-constraint="0" expand="true">
+            <task id="9" name="sensor grondvochtigheid" color="#00ff00" meeting="false" start="2022-09-26" duration="1" complete="0" thirdDate="2022-09-26" thirdDate-constraint="0" expand="true"/>
+            <task id="4" name="sensoren grondvruchtbaarheid" color="#00ff00" meeting="false" start="2022-09-26" duration="1" complete="0" thirdDate="2022-09-26" thirdDate-constraint="0" expand="true"/>
+            <task id="154" name="afstandsensor" color="#00ff00" meeting="false" start="2022-09-26" duration="1" complete="0" thirdDate="2022-09-01" thirdDate-constraint="0" expand="true"/>
+        </task>
+        <task id="15" name="objecten" color="#0000ff" meeting="false" start="2022-10-17" duration="1" complete="0" thirdDate="2022-09-26" thirdDate-constraint="0" expand="true">
+            <task id="18" name="reservoir" color="#6666ff" meeting="false" start="2022-10-17" duration="1" complete="0" thirdDate="2022-09-26" thirdDate-constraint="0" expand="true"/>
+            <task id="27" name="pompje" color="#6666ff" meeting="false" start="2022-10-17" duration="1" complete="0" thirdDate="2022-09-26" thirdDate-constraint="0" expand="true"/>
+        </task>
+        <task id="33" name="planten" color="#cc0000" meeting="false" start="2022-11-21" duration="1" complete="0" thirdDate="2022-11-21" thirdDate-constraint="0" expand="true">
+            <task id="34" name="bekijken plantensoort" color="#ff3333" meeting="false" start="2022-11-21" duration="1" complete="0" thirdDate="2022-09-26" thirdDate-constraint="0" expand="true"/>
+            <task id="38" name="planten benodigdheden bekijken/opzoeken" color="#ff3333" meeting="false" start="2022-11-21" duration="1" complete="0" thirdDate="2022-11-28" thirdDate-constraint="0" expand="true"/>
+        </task>
+        <task id="43" name="Website" color="#990099" meeting="false" start="2022-11-28" duration="133" complete="0" thirdDate="2022-11-28" thirdDate-constraint="0" expand="true">
+            <task id="44" name="website navbar aanmaken" color="#cc00cc" meeting="false" start="2022-11-28" duration="1" complete="0" thirdDate="2022-08-29" thirdDate-constraint="0" expand="true"/>
+            <task id="52" name="hoofdpagina aanmaken" color="#cc00cc" meeting="false" start="2022-11-28" duration="1" complete="0" thirdDate="2022-08-29" thirdDate-constraint="0" expand="true"/>
+            <task id="54" name="subpagina 'soorsten planten' aanmaken" color="#cc00cc" meeting="false" start="2022-12-08" duration="1" complete="0" thirdDate="2022-08-29" thirdDate-constraint="0" expand="true"/>
+            <task id="50" name="subpagina 'kosten' aanmaken" color="#cc00cc" meeting="false" start="2022-12-08" duration="1" complete="0" thirdDate="2022-08-29" thirdDate-constraint="0" expand="true"/>
+            <task id="56" name="subpagina 'contacteer ons' aanmaken" color="#cc00cc" meeting="false" start="2023-01-09" duration="1" complete="0" thirdDate="2022-08-29" thirdDate-constraint="0" expand="true"/>
+            <task id="60" name="subpagina ontwerpers aanmaken" color="#cc00cc" meeting="false" start="2023-01-09" duration="1" complete="0" thirdDate="2022-11-23" thirdDate-constraint="0" expand="true"/>
+            <task id="133" name="subpagina's 'grafieken' aanmaken" color="#cc00cc" meeting="false" start="2023-01-19" duration="1" complete="0" thirdDate="2022-09-01" thirdDate-constraint="0" expand="true"/>
+            <task id="141" name="admin pagina toevoegen" color="#cc00cc" meeting="false" start="2023-03-09" duration="1" complete="0" thirdDate="2022-09-01" thirdDate-constraint="0" expand="true"/>
+            <task id="151" name="aanpassingen maken" color="#cc00cc" meeting="false" start="2022-11-28" duration="133" complete="0" thirdDate="2022-09-01" thirdDate-constraint="0" expand="true"/>
+        </task>
+        <task id="64" name="programma" color="#009999" meeting="false" start="2023-01-16" duration="79" complete="0" thirdDate="2022-11-23" thirdDate-constraint="0" expand="true">
+            <task id="66" name="vochtigheids-sensor ontvangen" color="#00cccc" meeting="false" start="2023-01-16" duration="1" complete="0" thirdDate="2022-11-23" thirdDate-constraint="0" expand="true"/>
+            <task id="73" name="programma maken voor vochtigheids-sensor" color="#00cccc" meeting="false" start="2023-01-16" duration="4" complete="0" thirdDate="2022-11-23" thirdDate-constraint="0" expand="true">
+                <task id="71" name="waardes opmeten op arduino" color="#cccccc" meeting="false" start="2023-01-16" duration="1" complete="0" thirdDate="2022-11-23" thirdDate-constraint="0" expand="true"/>
+                <task id="195" name="waardes opmeten op rpi" color="#cccccc" meeting="false" start="2023-01-19" duration="1" complete="0" thirdDate="2022-07-01" thirdDate-constraint="0" expand="true"/>
+            </task>
+            <task id="244" name="programma maken voor afstandssensor" color="#00cccc" meeting="false" start="2023-02-27" duration="1" complete="0" thirdDate="2022-08-01" thirdDate-constraint="0" expand="true">
+                <task id="245" name="waardes opmeten op arduino" color="#cccccc" meeting="false" start="2023-02-27" duration="1" complete="0" thirdDate="2022-08-01" thirdDate-constraint="0" expand="true"/>
+                <task id="248" name="waardes opmeten op rpi" color="#00cccc" meeting="false" start="2023-02-27" duration="1" complete="0" thirdDate="2022-08-01" thirdDate-constraint="0" expand="true"/>
+            </task>
+            <task id="200" name="NPK-sensor ontvangen" color="#8cb6ce" meeting="false" start="2023-02-27" duration="1" complete="0" thirdDate="2022-07-01" thirdDate-constraint="0" expand="true"/>
+            <task id="76" name="programma maken voor NPK-sensor 2" color="#00cccc" meeting="false" start="2023-02-27" duration="44" complete="0" thirdDate="2022-11-23" thirdDate-constraint="0" expand="true">
+                <task id="203" name="codes zoeken voor rpi en arduino" color="#cccccc" meeting="false" start="2023-02-27" duration="1" complete="0" thirdDate="2022-07-01" thirdDate-constraint="0" expand="true"/>
+                <task id="209" name="waardes opmeten op arduino" color="#cccccc" meeting="false" start="2023-03-06" duration="34" complete="0" thirdDate="2022-07-01" thirdDate-constraint="0" expand="true"/>
+                <task id="216" name="waardes opmeten op rpi" color="#cccccc" meeting="false" start="2023-04-20" duration="6" complete="0" thirdDate="2022-07-01" thirdDate-constraint="0" expand="true"/>
+            </task>
+            <task id="236" name="verbinding arduino naar live-server" color="#00cccc" meeting="false" start="2023-03-13" duration="39" complete="0" thirdDate="2022-08-01" thirdDate-constraint="0" expand="true"/>
+            <task id="225" name="conectie tussen arduino en rpi" color="#00cccc" meeting="false" start="2023-04-13" duration="16" complete="0" thirdDate="2023-04-13" thirdDate-constraint="0" expand="true">
+                <task id="226" name="kabel" color="#cccccc" meeting="false" start="2023-04-13" duration="3" complete="0" thirdDate="2022-07-01" thirdDate-constraint="0" expand="true"/>
+                <task id="227" name="bluetooth" color="#cccccc" meeting="false" start="2023-05-04" duration="1" complete="0" thirdDate="2022-07-01" thirdDate-constraint="0" expand="true"/>
+            </task>
+        </task>
+        <task id="91" name="bouwen" color="#ffff00" meeting="false" start="2023-05-12" duration="17" complete="0" thirdDate="2022-11-23" thirdDate-constraint="0" expand="true">
+            <task id="249" name="vaste stukken solderen" color="#ffff00" meeting="false" start="2023-05-12" duration="1" complete="0" thirdDate="2022-08-01" thirdDate-constraint="0" expand="true"/>
+            <task id="97" name="pompje monteren in reservoir" color="#ffff00" meeting="false" start="2023-05-19" duration="1" complete="0" thirdDate="2022-11-23" thirdDate-constraint="0" expand="true"/>
+            <task id="102" name="duurtest" color="#ffff00" meeting="false" start="2023-05-31" duration="3" complete="0" thirdDate="2022-11-23" thirdDate-constraint="0" expand="true"/>
+            <task id="96" name="arduino in omhulzing plaatsen" color="#ffff00" meeting="false" start="2023-06-02" duration="1" complete="0" thirdDate="2022-11-23" thirdDate-constraint="0" expand="true"/>
+            <task id="105" name="losse stukken solderen" color="#ffff00" meeting="false" start="2023-06-02" duration="1" complete="0" thirdDate="2022-11-23" thirdDate-constraint="0" expand="true"/>
+            <task id="260" name="scherm aansluiten" color="#ffff00" meeting="false" start="2023-06-05" duration="1" complete="0" thirdDate="2022-09-19" thirdDate-constraint="0" expand="true"/>
+            <task id="110" name="testen" color="#ffff00" meeting="false" start="2023-06-05" duration="1" complete="0" thirdDate="2022-11-23" thirdDate-constraint="0" expand="true"/>
+        </task>
+        <task id="112" name="presentatie" color="#000000" meeting="false" start="2023-06-02" duration="6" complete="0" thirdDate="2023-05-15" thirdDate-constraint="0" expand="true">
+            <task id="113" name="presentatie maken/voorbereiden" color="#000000" meeting="false" start="2023-06-02" duration="6" complete="0" thirdDate="2022-11-23" thirdDate-constraint="0" expand="true"/>
+            <task id="180" name="presentatie" color="#000000" meeting="false" start="2023-06-09" duration="1" complete="0" thirdDate="2022-09-01" thirdDate-constraint="0" expand="true"/>
+        </task>
+    </tasks>
+    <resources/>
+    <allocations/>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+    <roles roleset-name="SoftwareDevelopment"/>
+</project>

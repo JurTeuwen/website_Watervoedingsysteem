@@ -1,6 +1,6 @@
 /* importeer library */
 #include <AltSoftSerial.h>      // voor seriële communicatie met NPK-sensor
-#include <Wire.h>               // voor I2C-communicatie met NPK-sensor en lcd-scherm
+#include <Wire.h>               // voor I2C-communicatie met lcd-scherm
 #include <LiquidCrystal_I2C.h>  // voor LCD-scherm aan te sturen
 
 LiquidCrystal_I2C lcd(0x27, 20, 4);  // definieer adres en afmetingen van LCD-scherm

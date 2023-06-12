@@ -70,11 +70,15 @@
       byte values[11];    // maak een array voor waarden op te slaan
       AltSoftSerial mod;  // Maak een AltSoftSerial-object aan met de naam mod
       
-      int waterpompPin = 5;           // waterpomp zit op pin 5
-      int vochtigheidssensorPin = A0; // vochtigheidssensor zit op pin A0
-      int vochtigheidssensorValue;    // Variabele om de waarde van de vochtigheidssensor op te slaan
-      int vochtpercentage;            // variabele om vochtpercentage op te slaan
-      int fout;                       // Variabele om foutindicatie bij te houden
+      int waterpompPin = 5;               // waterpomp zit op pin 5
+      int vochtigheidssensorPin = A0;     // vochtigheidssensor zit op pin A0
+      int vochtigheidssensorValue;        // Variabele om de waarde van de vochtigheidssensor op te slaan
+      int vochtpercentage;                // variabele om vochtpercentage op te slaan
+      int fout;                           // Variabele om foutindicatie bij te houden
+      int MinimunNiveau = 40;             // minimum waterpersentage is 40 %
+      unsigned long starttimer = 0;       // timer voor stoppen van pomp
+      int ingestelde_water_tijd = 10000;  // tijd voordat pomp moet stoppen
+      int pomp_aan = 0;                   // de default waarde van de pomp is uit
       
       /* dit doet de Arduino 1 keer */
       void setup() {
@@ -180,10 +184,30 @@
             lcd.print("mg/kg");           // toon "mg/kg" op het LCD-scherm
           }
         }
-        if (vochtpercentage &lt; 50) {        // als het vochtpercentage lager is als 50, dan ...
-          digitalWrite(waterpompPin, HIGH);   // zet waterpomp aan
-        } else {                              // anders, dan ...
-          digitalWrite(waterpompPin, LOW);    // zet waterpomp uit
+        if ((vochtpercentage &lt; MinimunNiveau) && pomp_aan == 0) {  // als het vochtpercentage lager is als het minimum en pomp_aan is 0, dan ...
+          lcd.noDisplay();                                         // zet lcd-scherm uit
+          lcd.noBacklight();                                       // zet achtergrondlicht uit
+          pomp_aan = 1;                                            // zet pomp_aan op 1
+          starttimer = millis();                                   // starttimer is de huidige tijd
+          digitalWrite(waterpompPin, HIGH);                        // zet pomp aan
+        }
+        if (pomp_aan == 1 &amp;&amp; millis() - starttimer &gt; ingestelde_water_tijd) {  // als pomp_aan 1 is en als de huidige tijd min de starttijd groter is als de ingestelde tijd, dan ...
+          digitalWrite(waterpompPin, LOW);                                     // zet pomp uit
+          lcd.display();                                                       // zet lcd-scherm aan
+          lcd.backlight();                                                     // zet achtergrondlicht aan
+          lcd.clear();                                                         // maak het LCD-scherm leeg
+          lcd.setCursor(2, 1);                                                 // zet de cursor van het LCD-scherm op positie (2, 1)
+          lcd.print("controleer tank");                                        // toon "controleer tank" op het LCD-scherm
+          lcd.setCursor(2, 2);                                                 // zet de cursor van het LCD-scherm op positie (2, 2)
+          lcd.print("of controleer voor");                                     // toon "of controleer voor" op het LCD-scherm
+          lcd.setCursor(2, 3);                                                 // zet de cursor van het LCD-scherm op positie (2, 3)
+          lcd.print("lekkage");                                                // toon "lekkage" op het LCD-scherm
+        }
+        if (vochtpercentage &gt; (MinimunNiveau + 20)) {  // als het vochtpercentage groter is als het minimum plus 20, dan ...
+          digitalWrite(waterpompPin, LOW);             // zet pomp uit
+          lcd.display();                               // zet lcd-scherm aan
+          lcd.backlight();                             // zet achtergrondlicht aan
+          pomp_aan = 0;                                // zet pomp_aan op 0
         }
       }
       
